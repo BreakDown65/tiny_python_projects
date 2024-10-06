@@ -69,3 +69,22 @@ Then do `git clone` of *your* repository to get a local copy.
 # Copyright
 
 © Ken Youens-Clark 2019-2024
+---
+# Saját megjegyzések
+## conda install vs pip: requirements.txt vs enviroment.yml
+Amikor txt file van megadva (requirements.txt), és nem pip install akarod használni, kell csinálni egy ilyen fájlt:
+conda uses an environment.yaml file instead of requirements.txt, but you can include one in the other:
+
+# environment.yaml
+
+name: test-env
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.5
+  - anaconda
+  - pip
+  - pip:
+    - -r file:requirements.txt
+
+Ezt már lehet conda install megcsinálni.

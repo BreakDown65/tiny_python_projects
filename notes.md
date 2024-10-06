@@ -1,0 +1,3 @@
+- Hozzáadtam az első saját megjegyzésemet a README.md fájlhoz: környezet beállítás
+- Létrehoztam ezt a fájl
+- Létrehoztam az első fejezet python fájlt
